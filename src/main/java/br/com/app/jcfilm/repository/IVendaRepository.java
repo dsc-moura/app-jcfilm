@@ -14,7 +14,7 @@ public interface IVendaRepository extends JpaRepository<Venda, Long>{
 	List<Venda> findAll();
 	Venda findById(int id);
 	Venda save(Venda venda);
-	@Query(nativeQuery = true, value = "Select * from jcf_tbl_cad_vendas v where v.id_cliente = :id and v.servico = 1 and v.situacao = 0 order by v.id desc LIMIT 1")
+	@Query(nativeQuery = true, value = "Select * from jcf_tbl_cad_vendas v where v.id_cliente = :id and v.servico = true and v.situacao = false order by v.id desc LIMIT 1")
 	Venda findVendaByIdCliente(@Param("id") int id);
 	@Modifying
 	@Transactional

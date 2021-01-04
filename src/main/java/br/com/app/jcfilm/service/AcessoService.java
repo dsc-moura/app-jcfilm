@@ -24,7 +24,7 @@ public class AcessoService implements UserDetailsService {
 	public Acesso save(Usuario usuario) {	
 		Acesso acesso = new Acesso();
 		acesso.setUsuario(usuario);
-		acesso.setPermissao(false);
+		acesso.setPermissao(true);
 		acesso.setSenha(encryptPassword("123"));		
 		
 		return acessoRepository.save(acesso);
