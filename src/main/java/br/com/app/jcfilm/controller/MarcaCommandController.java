@@ -28,6 +28,8 @@ public class MarcaCommandController {
 			Marca verifica = marcaService.findByNome(marca.getNome());
 			
 			if(verifica == null) {
+				marca.setNome(marca.getNome().toUpperCase());
+				
 				if(marcaService.save(marca) == null) {				
 					return ResponseEntity.badRequest().body("Não foi possível efetuar o cadastro!");
 				}

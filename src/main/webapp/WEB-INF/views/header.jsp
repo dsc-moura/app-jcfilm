@@ -44,12 +44,6 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-               
-                </li>
-                <li>
-              	
-                </li>
-                <li>
                		<a href="${s:mvcUrl('MQC#marca').build()}">Marcas</a>
                 </li>
                 <li>
@@ -71,47 +65,16 @@
             <a href="#">
               <i class="fa fa-shopping-cart"></i>
               <span>Vendas</span>
-              <span class="badge badge-pill badge-danger">3</span>
             </a>
             <div class="sidebar-submenu">
               <ul>
                 <li>
                 	<a href="${s:mvcUrl('VQC#venda').build()}">Vendas & Orçamentos</a>
-                </li>
-                <li>
-                  	<a href="#">Orders</a>
-                </li>
-                <li>
-                  	<a href="#">Credit cart</a>
-                </li>
+                </li>                
               </ul>
             </div>
           </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
-              <i class="fas fa-cogs"></i>
-              <span>Parametrização</span>
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-               
-                </li>
-                <li>
-                  <a href="#">Panels</a>
-                </li>
-                <li>
-                  <a href="#">Tables</a>
-                </li>
-                <li>
-                  <a href="#">Icons</a>
-                </li>
-                <li>
-                  <a href="#">Forms</a>
-                </li>
-              </ul>
-            </div>
-          </li>
+          
           <li class="sidebar-dropdown">
             <a href="#">
               <i class="fas fa-clipboard-list"></i>
@@ -128,43 +91,16 @@
           <li class="sidebar-dropdown">
             <a href="#">
               <i class="fa fa-globe"></i>
-              <span>Acessos</span>
+              <span>Controle de Acesso</span>
             </a>
              <div class="sidebar-submenu">
               <ul>
               	<li>
-              		<a href="${s:mvcUrl('AQC#acesso').build()}">Conceder Acesso</a>
-                </li>                
-                <li>
-             
-                </li>
-                <li>
-               
-                </li>
+              		<a href="${s:mvcUrl('AQC#acesso').build()}">Funcionario Acessos</a>
+                </li>               
+              
               </ul>
             </div>
-          </li>
-          <li class="header-menu">
-            <span>Extra</span>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-book"></i>
-              <span>Documentation</span>
-              <span class="badge badge-pill badge-primary">Beta</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-calendar"></i>
-              <span>Calendar</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-folder"></i>
-              <span>Examples</span>
-            </a>
           </li>
         </ul>
       </div>
@@ -184,7 +120,7 @@
         <i class="fa fa-cog"></i>
         <span class="badge-sonar"></span>
       </a>
-      <a href="#">
+      <a href="${s:mvcUrl('LCC#logout').build()}">
         <i class="fa fa-power-off"></i>
       </a>
     </div>

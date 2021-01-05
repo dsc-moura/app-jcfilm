@@ -19,6 +19,7 @@ public class UsuarioService{
 	}
 	
 	public Usuario save(Usuario usuario) {
+		usuario = transformaObjetoToUpperCase(usuario);
 		return usuarioRepository.save(usuario);
 	}
 		
@@ -41,5 +42,14 @@ public class UsuarioService{
 	
 	public List<Usuario> findByNome(String parametro){
 		return usuarioRepository.findByNome("%"+parametro+"%");
+	}
+	
+	public Usuario transformaObjetoToUpperCase(Usuario obj) {
+		Usuario usuario = new Usuario();
+		usuario = obj;
+		usuario.setNome(usuario.getNome().toUpperCase());	
+		usuario.setSobrenome(usuario.getSobrenome().toUpperCase());
+		
+		return usuario;
 	}
 }

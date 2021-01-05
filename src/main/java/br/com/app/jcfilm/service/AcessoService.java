@@ -24,8 +24,8 @@ public class AcessoService implements UserDetailsService {
 	public Acesso save(Usuario usuario) {	
 		Acesso acesso = new Acesso();
 		acesso.setUsuario(usuario);
-		acesso.setPermissao(true);
-		acesso.setSenha(encryptPassword("123"));		
+		acesso.setPermissao(false);
+		acesso.setSenha(encryptPassword("123456"));		
 		
 		return acessoRepository.save(acesso);
 	}
@@ -42,6 +42,7 @@ public class AcessoService implements UserDetailsService {
 		Acesso acess = acessoRepository.findById(acesso.getId());
 		
 		acesso.setSenha(encryptPassword(acesso.getSenha()));
+		
 		BeanUtils.copyProperties(acesso, acess,"id");
 		
 		return acessoRepository.save(acesso);
@@ -59,7 +60,7 @@ public class AcessoService implements UserDetailsService {
 		 if(acesso.isPresent()) {
 			 return acesso.get();
 		 }else {
-			 throw new UsernameNotFoundException(String.format("Username[%s] not found"));
+			 throw new UsernameNotFoundException(String.format("Usuário não possui acesso a aplicação!"));
 		 }
 	}
 	

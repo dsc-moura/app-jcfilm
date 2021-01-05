@@ -28,6 +28,8 @@ public class ProdutoCommandController {
 			Produto verifica = produtoService.findByNome(produto.getNome());
 			
 			if(verifica == null) {
+				produto.setNome(produto.getNome().toUpperCase());
+				
 				if(produtoService.save(produto) == null) {				
 					return ResponseEntity.badRequest().body("Não foi possível efetuar o cadastro!");
 				}

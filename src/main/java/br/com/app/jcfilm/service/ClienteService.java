@@ -20,6 +20,7 @@ public class ClienteService {
 	IClienteVeiculoRepository clienteVeiculoRepository;
 		
 	public Cliente save(Cliente cliente) {
+		cliente = transformaObjetoToUpperCase(cliente);
 		return clienteRepository.save(cliente);
 	}
 	
@@ -53,7 +54,18 @@ public class ClienteService {
 	
 	public void delete(Cliente cliente) {
 		clienteVeiculoRepository.removeVeiculosCliente(cliente.getId());
-		clienteRepository.delete(cliente);
-		
+		clienteRepository.delete(cliente);		
 	}	
+	
+	public Cliente transformaObjetoToUpperCase(Cliente obj) {
+		Cliente cliente = new Cliente();
+		cliente = obj;
+		cliente.setNome(obj.getNome().toUpperCase());	
+		cliente.setSobrenome(obj.getSobrenome().toUpperCase());
+		cliente.setBairro(obj.getBairro().toUpperCase());
+		cliente.setEndereco(obj.getEndereco().toUpperCase());
+		cliente.setComplemento(obj.getComplemento().toUpperCase());
+		
+		return cliente;
+	}
 }

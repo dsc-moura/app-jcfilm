@@ -31,12 +31,11 @@ public class Venda {
 	private Cliente cliente;	
 	private boolean orcamento;
 	private boolean servico;
-	private boolean situacao;
-	
+	private boolean situacao;	
 	//@Column(name="data",nullable=true,columnDefinition="TIMESTAMP default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP")
 	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
-	//@Column(name="data",insertable=false, updatable=false,columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")	
+	@Column(name="data",columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")	
 	private Calendar data;
 	@Column(nullable=true)
 	private int prazo;

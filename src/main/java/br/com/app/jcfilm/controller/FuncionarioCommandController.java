@@ -29,7 +29,6 @@ public class FuncionarioCommandController {
 	public ResponseEntity<String> save(@Valid Usuario usuario) {	
 				
 		if(usuario.getId() == 0) {			
-					
 			if(usuarioService.save(usuario) == null) {				
 				return ResponseEntity.badRequest().body("Não foi possível efetuar o cadastro");
 			}

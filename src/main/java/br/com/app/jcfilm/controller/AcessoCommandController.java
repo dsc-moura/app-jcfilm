@@ -24,9 +24,10 @@ public class AcessoCommandController {
 		}else {
 			if(acesso.isPermissao()) {
 				if(acessoService.update(acesso) == null) {				
-					return ResponseEntity.ok().body("Acesso concedido sucesso");		
-				}	
-				return ResponseEntity.badRequest().body("Não foi possível conceder o acesso");
+					return ResponseEntity.badRequest().body("Não foi possível conceder o acesso");
+				}					
+				return ResponseEntity.ok().body("Acesso concedido sucesso");	
+				
 			}			
 			return ResponseEntity.badRequest().body("Não foi possível conceder o acesso");
 		}			

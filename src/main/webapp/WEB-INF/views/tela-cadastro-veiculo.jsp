@@ -42,6 +42,10 @@
 			background-color: #FF6347;
 		}
 		
+		body{
+			background-color: #EE6363;			
+		}
+		
 		thead.corHeaderPagamento{
 			background-color: #4F4F4F;
 		}			

@@ -35,8 +35,7 @@ public class ClienteCommandController {
 	@PostMapping("/cliente/save")
 	public ResponseEntity<String> save(@Valid Cliente cliente) {	
 				
-		if(cliente.getId() == 0) {			
-					
+		if(cliente.getId() == 0) {				
 			if(clienteService.save(cliente) == null) {				
 				return ResponseEntity.badRequest().body("Não foi possível efetuar o cadastro");
 			}
@@ -58,6 +57,8 @@ public class ClienteCommandController {
 		if(veiculo.getCliente().getId() == 0) {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Selecione o Cliente dono do veiculo!");
 		}
+		
+		veiculo.setPlaca(veiculo.getPlaca().toUpperCase());
 		
 		if(clienteVeiculoService.save(veiculo) == null) {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Não foi possível cadastrar o veiculo!");

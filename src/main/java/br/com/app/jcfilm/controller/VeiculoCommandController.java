@@ -22,13 +22,15 @@ public class VeiculoCommandController {
 	VeiculoService veiculoService;
 	
 	@PostMapping("/veiculo/save")
-	public ResponseEntity<String> save(@Valid Veiculo Veiculo) {	
+	public ResponseEntity<String> save(@Valid Veiculo veiculo) {	
 				
-		if(Veiculo.getId() == 0) {			
-			Veiculo verifica = veiculoService.findByNome(Veiculo.getNome());
+		if(veiculo.getId() == 0) {			
+			Veiculo verifica = veiculoService.findByNome(veiculo.getNome());
 			
 			if(verifica == null) {
-				if(veiculoService.save(Veiculo) == null) {				
+				veiculo.setNome(veiculo.getNome().toUpperCase());
+				
+				if(veiculoService.save(veiculo) == null) {				
 					return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Não foi possível efetuar o cadastro!");
 				}
 				
@@ -38,7 +40,7 @@ public class VeiculoCommandController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Veiculo já cadastrada!");
 		}else {
 						
-			if(veiculoService.update(Veiculo) == null) {
+			if(veiculoService.update(veiculo) == null) {
 				return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Não foi possível alterar o cadastro!");				
 			}
 				

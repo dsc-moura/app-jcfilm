@@ -2,6 +2,8 @@ package br.com.app.jcfilm.service;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
@@ -66,7 +68,12 @@ public class VendaService {
 	}
 	
 	public Venda updateVenda(Venda venda) {
+		Date date = new Date(System.currentTimeMillis());
+		Calendar data = new GregorianCalendar();
+		data.setTime(date);
+		
 		Venda sale = vendaRepository.findById(venda.getId());
+		venda.setData(data);
 		
 		BeanUtils.copyProperties(venda, sale,"id");
 		

@@ -44,7 +44,11 @@
 		
 		thead.corHeaderPagamento{
 			background-color: #4F4F4F;
-		}			
+		}	
+		
+		body{
+			background-color: #EE6363;			
+		}		
 			
 		th.alinha-cor{
 			text-align: center;
