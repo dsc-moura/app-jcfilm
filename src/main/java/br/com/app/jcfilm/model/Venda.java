@@ -13,6 +13,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 
 @Entity
 @Table(name="jcf_tbl_cad_vendas")
@@ -30,9 +32,11 @@ public class Venda {
 	private boolean orcamento;
 	private boolean servico;
 	private boolean situacao;
-	@Temporal(TemporalType.TIMESTAMP)
+	
 	//@Column(name="data",nullable=true,columnDefinition="TIMESTAMP default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP")
-	@Column(name="data",nullable=false)
+	@CreationTimestamp
+	@Temporal(TemporalType.TIMESTAMP)
+	//@Column(name="data",insertable=false, updatable=false,columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")	
 	private Calendar data;
 	@Column(nullable=true)
 	private int prazo;

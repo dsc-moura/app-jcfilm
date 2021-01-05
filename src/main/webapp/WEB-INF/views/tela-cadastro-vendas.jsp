@@ -20,7 +20,7 @@
 	
 	<s:url value="/resources/img" var="imgPath"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
-	<link rel="stylesheet" href="http://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="${cssPath}/dataTables.min.css">
 	
 	
 	<style type="text/css">		
