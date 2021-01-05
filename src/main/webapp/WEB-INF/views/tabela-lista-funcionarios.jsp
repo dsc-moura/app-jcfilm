@@ -17,7 +17,7 @@
 		 	<c:forEach items="${funcionarios}" var="usuario">
 		 		<tr id="cliente-${usuario.id}">
 		 			<td id="acoes-tabela">					
-						<button type="button" class="btn btn-primary" id="visualizar" onclick="EditarVisualizar('${usuario.id}','true');" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="far fa-eye"></i></button>						
+						<button type="button" class="btn btn-primary" id="visualizar" onclick="EditarVisualizar('${usuario.id}','true');" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="far fa-folder-open"></i></button>						
 		 			</td>	
 		 			<td>${usuario.id}</td>	 			
 		 			<td>${usuario.nome}</td>

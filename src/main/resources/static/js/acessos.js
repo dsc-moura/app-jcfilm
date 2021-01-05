@@ -96,7 +96,7 @@ function Alterar(){
 }
 
  function SubmitCadastroAcesso() {
-     $('#FormCadAcesso').submit(function (e) {
+     $('#formCadAcesso').submit(function (e) {
          e.preventDefault();            
          $.ajax({
              type: "POST",

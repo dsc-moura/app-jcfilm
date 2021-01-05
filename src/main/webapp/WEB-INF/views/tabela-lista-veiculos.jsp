@@ -13,7 +13,7 @@
 			<c:forEach items="${veiculos}" var="veiculo">
 				<tr class="veiculo" id="veiculo-${veiculo.id}">						
 					<td id="acoes">							
-						<button type="button" class="btn btn-primary" id="visualizar" onclick="EditarVisualizar('${veiculo.id}','${veiculo.nome}','${veiculo.marca.id}');" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="far fa-eye"></i></button>						
+						<button type="button" class="btn btn-primary" id="visualizar" onclick="EditarVisualizar('${veiculo.id}','${veiculo.nome}','${veiculo.marca.id}');" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="far fa-folder-open"></i></button>						
 		 			</td>	
 					<td id="id">${veiculo.id}</td>	
 					<td>

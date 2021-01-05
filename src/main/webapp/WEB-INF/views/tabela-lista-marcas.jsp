@@ -12,7 +12,7 @@
 			<c:forEach items="${marcas}" var="marca">
 				<tr class="marca" id="marca-${marca.id}">						
 					<td id="acoes">							
-						<button type="button" class="btn btn-primary" id="visualizar" onclick="EditarVisualizar('${marca.id}','${marca.nome}');" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="far fa-eye"></i></button>						
+						<button type="button" class="btn btn-primary" id="visualizar" onclick="EditarVisualizar('${marca.id}','${marca.nome}');" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="far fa-folder-open"></i></button>						
 		 			</td>	
 					<td id="id">${marca.id}</td>			
 					<td>
