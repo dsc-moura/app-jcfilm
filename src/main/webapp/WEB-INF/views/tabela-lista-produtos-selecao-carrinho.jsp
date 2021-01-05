@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<div class="row">
-									<div class="col-md-12">	
+
+								
 	<table id="tabela-produtos-servicos-pesquisa" class="table table-bordered" >
 	   <thead class="corHeaderMarca">
 			<tr>			
@@ -30,5 +30,4 @@
 			</c:forEach>
 		</tbody>
 	</table>	
-</div>
-</div>
+

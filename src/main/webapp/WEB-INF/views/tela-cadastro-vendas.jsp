@@ -69,15 +69,6 @@
 			 width: 98%;
 		}
 		
-		.scrollTabelas{
-		 	max-height:250px;
-		  	overflow-x:auto;
-		}	
-		
-		.scrollTabelasGarantias{
-		 	max-height:600px;
-		  	overflow-x:auto;
-		}			
 	</style>	
 
 </head>

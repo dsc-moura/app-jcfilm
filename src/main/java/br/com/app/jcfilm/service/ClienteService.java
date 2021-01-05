@@ -62,9 +62,16 @@ public class ClienteService {
 		cliente = obj;
 		cliente.setNome(obj.getNome().toUpperCase());	
 		cliente.setSobrenome(obj.getSobrenome().toUpperCase());
-		cliente.setBairro(obj.getBairro().toUpperCase());
-		cliente.setEndereco(obj.getEndereco().toUpperCase());
-		cliente.setComplemento(obj.getComplemento().toUpperCase());
+		
+		if(obj.getBairro()!= null) {
+			cliente.setBairro(obj.getBairro().toUpperCase());
+		}
+		if(obj.getEndereco()!= null) {
+			cliente.setEndereco(obj.getEndereco().toUpperCase());
+		}
+		if(obj.getComplemento() != null) {
+			cliente.setComplemento(obj.getComplemento().toUpperCase());
+		}		
 		
 		return cliente;
 	}
